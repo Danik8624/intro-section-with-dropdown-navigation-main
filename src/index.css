@@ -1,13 +1,314 @@
+* {
+  font-family: "Space Grotesk", sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+li,
+button {
+  cursor: pointer;
+}
+
+li {
+  color: hsl(0, 0%, 41%);
+}
+
+li:hover {
+  color: hsl(0, 0%, 0%);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 1300px;
+}
+
+.Hero {
+  display: flex;
+  justify-content: center;
+}
+
+.Hero img {
+  height: 860px;
+  width: 640px;
+  padding-left: 40px;
+}
+
+.Text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 250px;
+}
+
+.Text h1 {
+  font-size: 100px;
+  line-height: 100px;
+  margin-top: -100px;
+}
+
+.Text p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 80px;
+}
+
+.Text button {
+  font-size: 18px;
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  border: transparent;
+  /* margin-bottom: 180px; */
+}
+
+.Text button:hover {
+  color: black;
+  background-color: white;
+  border: 2px hsl(0, 0%, 0%) solid;
+}
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+.Navbar_elements {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.Navbar_buttons {
+  margin-right: 80px;
+}
+
+.Navbar ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.Navbar li {
+  padding-left: 50px;
+}
+
+.logos {
+  display: flex;
+  width: 200px;
+}
+
+.logos img {
+  width: 70%;
+  height: 70%;
+  padding: 0;
+  padding-right: 30px;
+}
+
+.login,
+.register,
+.login-mobile,
+.register-mobile {
+  padding: 10px 25px;
+  border-radius: 15px;
+  background-color: white;
+  color: hsl(0, 0%, 41%);
+  border: 2px hsl(0, 0%, 41%) solid;
+}
+
+.login:hover,
+.login-mobile:hover {
+  color: black;
+}
+
+.register:hover {
+  color: black;
+  border: 2px hsl(0, 0%, 0%) solid;
+}
+
+.login {
+  border: transparent;
+  margin-right: 15px;
+}
+
+.popup-menu {
+  margin-top: 10px;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  margin-left: -20px;
+  box-shadow: 5px 5px 15px 10px hsl(0, 0%, 87%);
+  border-radius: 15px;
+}
+
+.popup-menu ul {
+  padding: 15px;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Set the menu items to appear in a column */
+}
+
+.popup-menu li {
+  font-size: 15px;
+  padding: 10px;
+  line-height: 10px;
+}
+
+.popup-menu img {
+  width: 13px;
+  padding-right: 10px;
+}
+
+.Features {
+  margin-left: -80px;
+}
+
+.Company {
+  margin-left: 1px;
+}
+
+.Learnmore {
+  margin-bottom: 20px;
+}
+.Learnmore p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* MOBILE LAYOUT  */
+
+@media screen and (max-width: 500px) {
+  .App {
+    min-width: 500px;
+  }
+}
+
+.mobile-layout {
+  margin: 20px;
+}
+
+.navbar_mobile {
+  display: flex;
+  /* margin-top: 20px; */
+  justify-content: space-between;
+  width: unset;
+}
+
+.navbar_mobile button {
+  right: 10px;
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  border: none;
+}
+
+.HeroMobile img {
+  margin-top: 20px;
+  width: 455px;
+}
+
+.TextMobile {
+  text-align: center;
+}
+
+.TextMobile h1 {
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.TextMobile p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.TextMobile button {
+  font-size: 18px;
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  border: transparent;
+  margin-bottom: 15px;
+}
+
+.TextMobile button:hover {
+  color: black;
+  background-color: white;
+  border: 2px hsl(0, 0%, 0%) solid;
+}
+
+.Learnmore-mobile p {
+  margin-bottom: 10px;
+}
+
+#lastline {
+  margin-bottom: 30px;
+}
+
+.sidenavbar-mobile {
+  background-color: white;
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 1;
+}
+
+.dim {
+  background-color: rgba(0, 0, 0, 0.668);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  right: 0px;
+  top: 0;
+}
+
+.sidenavbar-mobile li {
+  padding-top: 30px;
+  list-style: none;
+}
+
+.sidenavbar-mobile button {
+  width: 80%;
+}
+
+.login-mobile {
+  border: none;
+}
+
+.register-mobile {
+  margin-top: 20px;
+}
+
+#toplist {
+  padding-top: 50px;
+}
+
+#register-mobile {
+  border: 2px hsl(0, 0%, 41%) solid;
+}
+
+#register-mobile:hover {
+  color: black;
+  border: 2px hsl(0, 0%, 0%) solid;
 }
